@@ -65,7 +65,7 @@ body {
 	.scroll-to-top-btn {
 		position: fixed;
 		right: 0;
-		top: 50%;
+		bottom: 25%;
 		transform: translateY(-50%);
 		width: 40px;
 		height: 40px;
@@ -85,9 +85,28 @@ body {
 	padding: 2em;
 }
 
+@media (min-width: 576px) {
+	body {
+		.scroll-to-top-btn {
+			right: 10px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	body {
+		.scroll-to-top-btn {
+			right: 50px;
+		}
+	}
+}
+
 @media (min-width: 992px) {
 	body {
 		background-image: url('./assets/coding-big.jpg');
+		.scroll-to-top-btn {
+			right: 50px;
+		}
 	}
 }
 </style>
