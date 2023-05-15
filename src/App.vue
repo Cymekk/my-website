@@ -1,26 +1,93 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+	<router-view />
+	<button v-if="isVisible" class="scroll-to-top-btn" @click="scrollToTop"></button>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { ref } from 'vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+	setup() {
+		let isVisible = ref(false)
+
+		function scrollToTop() {
+			window.scrollTo(0, 0)
+		}
+
+		window.addEventListener('scroll', () => {
+			if (window.pageYOffset > 400) {
+				isVisible.value = true
+			} else {
+				isVisible.value = false
+			}
+		})
+
+		return { isVisible, scrollToTop }
+	},
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	scroll-padding-top: 50px;
+}
+
+body {
+	position: relative;
+	width: 100%;
+	min-height: 100svh;
+	background-image: url('./assets/coding-small.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	font-size: 62.5%;
+	font-family: 'Roboto', sans-serif;
+
+	&::after {
+		content: '';
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		min-height: 100svh;
+		background-color: rgba(0, 0, 0, 0.65);
+		z-index: -1;
+	}
+
+	.scroll-to-top-btn {
+		position: fixed;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 40px;
+		height: 40px;
+		background: none;
+		border: none;
+		outline: none;
+		background-image: url('./assets/chevron-up.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		cursor: pointer;
+	}
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2em;
+}
+
+@media (min-width: 992px) {
+	body {
+		background-image: url('./assets/coding-big.jpg');
+	}
 }
 </style>
