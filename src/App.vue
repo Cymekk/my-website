@@ -82,7 +82,7 @@ body {
 .wrapper {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 2em;
+	padding: 0 2em;
 }
 
 @media (min-width: 576px) {
