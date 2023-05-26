@@ -35,6 +35,10 @@
 				<i class="fa-solid fa-globe"></i>
 				<p>SEO</p>
 			</div>
+			<div class="box">
+				<img src="../../assets/firebase.png" alt="" />
+				<p>Firebase</p>
+			</div>
 		</div>
 	</section>
 </template>
@@ -80,6 +84,10 @@ export default {}
 				font-size: 1.2rem;
 				font-weight: bold;
 				text-align: center;
+			}
+
+			img{
+				width: 35%;
 			}
 		}
 	}

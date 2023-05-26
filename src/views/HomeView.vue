@@ -1,12 +1,12 @@
 <template>
+	<MobileNavComponent
+		@show-mobile-nav="handleNav"
+		:isVisible="isVisible"
+		@wheel.prevent
+		@touchmove.prevent
+		@scroll.prevent
+	/>
 	<div class="wrapper">
-		<MobileNavComponent
-			@show-mobile-nav="handleNav"
-			:isVisible="isVisible"
-			@wheel.prevent
-			@touchmove.prevent
-			@scroll.prevent
-		/>
 		<NavbarComponent @show-mobile-nav="handleNav" :isVisible="isVisible" />
 		<HeaderComponent />
 
