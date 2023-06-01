@@ -52,15 +52,33 @@ export default {
 		}
 
 		li {
+			position: relative;
 			font-size: 1.2rem;
 			margin: 0.5em;
-			padding: 0.5em 1em;
+			padding: 0.5em;
 			border-radius: 5px;
-			transition: background-color 0.3s, color 0.3s;
 
-			&:hover {
-				background-color: lightgray;
-				color: #000;
+			&::after,
+			&::before {
+				content: '';
+				position: absolute;
+				width: 0;
+				bottom: 0;
+				border-bottom: 2px solid #fff;
+				transition: width 0.3s ease-in;
+			}
+
+			&::after {
+				left: 50%;
+			}
+
+			&::before {
+				right: 50%;
+			}
+
+			&:hover::after,
+			&:hover::before {
+				width: 50%;
 			}
 		}
 	}

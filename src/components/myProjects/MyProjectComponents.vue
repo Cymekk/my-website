@@ -13,8 +13,8 @@
 				</div>
 
 				<div class="buttons-box">
-					<a href="https://cymekk.github.io/spr/"><button class="live">Live link</button></a>
-					<a href="https://github.com/Cymekk/spr"><button class="repo">Repo link</button></a>
+					<a href="https://cymekk.github.io/spr/" target="_blank"><button class="live">Live link</button></a>
+					<a href="https://github.com/Cymekk/spr" target="_blank"><button class="repo">Repo link</button></a>
 				</div>
 			</article>
 
@@ -32,8 +32,8 @@
 				</div>
 
 				<div class="buttons-box">
-					<a href="https://cymekk.github.io/wallet/"><button class="live">Live link</button></a>
-					<a href="https://github.com/Cymekk/wallet"><button class="repo">Repo link</button></a>
+					<a href="https://cymekk.github.io/wallet/" target="_blank"><button class="live">Live link</button></a>
+					<a href="https://github.com/Cymekk/wallet" target="_blank"><button class="repo">Repo link</button></a>
 				</div>
 			</article>
 
@@ -52,23 +52,61 @@
 				</div>
 
 				<div class="buttons-box">
-					<a href="https://cymekk.github.io/kalkulator-kalorii/"><button class="live">Live link</button></a>
-					<a href="https://github.com/Cymekk/kalkulator-kalorii"><button class="repo">Repo link</button></a>
+					<a href="https://cymekk.github.io/kalkulator-kalorii/" target="_blank"
+						><button class="live">Live link</button></a
+					>
+					<a href="https://github.com/Cymekk/kalkulator-kalorii" target="_blank"
+						><button class="repo">Repo link</button></a
+					>
+				</div>
+			</article>
+			<article class="projects__container--box">
+				<h3 class="title">NotesApp</h3>
+				<div class="text">
+					<p>
+						NotesApp is a simple app which allow you to add some notes. Login is neccessary to be able to add some
+						notes, if you don't have already account you can create it by using register form.
+					</p>
+					<p>
+						Stack which was I used during work on this project is: HTML, CSS, SCSS, RWD, JS, Vue(Vue router), Pinia
+						Store, Firebase
+					</p>
+				</div>
+
+				<div class="buttons-box">
+					<a href="https://noteapp-d9faf.firebaseapp.com" target="_blank"><button class="live">Live link</button></a>
+					<a href="https://github.com/Cymekk/NoteApp" target="_blank"><button class="repo">Repo link</button></a>
 				</div>
 			</article>
 		</div>
 	</main>
 </template>
-<script>
-export default {
-	name: 'MyProjectCompnent',
-}
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+	const handleObserver = () => {
+		const projects = document.querySelector('.projects')
+		const currentSection = window.scrollY
+
+
+		if (projects.offsetTop <= currentSection + window.innerHeight - 200) {
+			projects.classList.add('active')
+		} else if (projects.offsetTop <= currentSection + projects.getBoundingClientRect().height) {
+			projects.classList.remove('active')
+		}
+	}
+
+	document.addEventListener('scroll', handleObserver)
+})
 </script>
 <style lang="scss">
 .projects {
 	width: 100%;
 	min-height: 50vh;
 	color: #fff;
+	opacity: 0;
+	transition: opacity 0.5s ease-in;
 
 	&__title {
 		text-align: center;
@@ -144,6 +182,9 @@ export default {
 			}
 		}
 	}
+}
+.active {
+	opacity: 1;
 }
 
 @media (min-width: 576px) {

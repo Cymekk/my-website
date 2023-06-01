@@ -36,17 +36,34 @@
 				<p>SEO</p>
 			</div>
 			<div class="box">
-				<img src="../../assets/firebase.png" alt="" />
+				<img src="../../assets/firebase.png" alt="firebase icon" />
 				<p>Firebase</p>
 			</div>
 		</div>
 	</section>
 </template>
-<script>
-export default {}
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+	const handleObserver = () => {
+		const stack = document.querySelector('.my-skills')
+		const currentSection = window.scrollY
+
+		if (stack.offsetTop <= currentSection + window.innerHeight - 250) {
+			stack.classList.add('active')
+		} else {
+			stack.classList.remove('active')
+		}
+	}
+
+	document.addEventListener('scroll', handleObserver)
+})
 </script>
 <style lang="scss">
 .my-skills {
+	opacity: 0;
+	transition: opacity 0.5s ease-in;
 	&__title {
 		margin: 2em 0;
 		color: #fff;
@@ -86,8 +103,24 @@ export default {}
 				text-align: center;
 			}
 
-			img{
-				width: 35%;
+			img {
+				width: 80%;
+			}
+		}
+	}
+}
+
+.active {
+	opacity: 1;
+}
+
+@media (min-width: 576px) {
+	.my-skills {
+		&__container {
+			.box {
+				img {
+					width: 50%;
+				}
 			}
 		}
 	}
@@ -100,6 +133,10 @@ export default {}
 			gap: 2em;
 			.box {
 				width: 35%;
+
+				img {
+					width: 40%;
+				}
 			}
 		}
 	}
@@ -114,6 +151,10 @@ export default {}
 			gap: 2em;
 			.box {
 				width: 30%;
+
+				img {
+					width: 35%;
+				}
 			}
 		}
 	}

@@ -3,28 +3,24 @@
 	<button v-if="isVisible" class="scroll-to-top-btn" @click="scrollToTop"></button>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue'
 
-export default {
-	setup() {
-		let isVisible = ref(false)
+let isVisible = ref(false)
 
-		function scrollToTop() {
-			window.scrollTo(0, 0)
-		}
-
-		window.addEventListener('scroll', () => {
-			if (window.pageYOffset > 400) {
-				isVisible.value = true
-			} else {
-				isVisible.value = false
-			}
-		})
-
-		return { isVisible, scrollToTop }
-	},
+function scrollToTop() {
+	window.scrollTo(0, 0)
 }
+
+window.addEventListener('scroll', () => {
+	if (window.pageYOffset > 400) {
+		isVisible.value = true
+	} else {
+		isVisible.value = false
+	}
+})
+
+
 </script>
 
 <style lang="scss">

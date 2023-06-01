@@ -15,11 +15,29 @@
 		</div>
 	</section>
 </template>
-<script>
-export default {}
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+	const handleObserver = () => {
+		const contact = document.querySelector('.contact')
+		const currentSection = window.scrollY
+
+		if (contact.offsetTop <= currentSection + window.innerHeight - 150) {
+			contact.classList.add('active')
+		} else {
+			contact.classList.remove('active')
+		}
+	}
+
+	document.addEventListener('scroll', handleObserver)
+})
 </script>
 <style lang="scss">
 .contact {
+	opacity: 0;
+	transition: opacity 0.5s ease-in;
+
 	&__title {
 		margin: 2em;
 		color: #fff;
@@ -42,5 +60,9 @@ export default {}
 			padding-left: 10px;
 		}
 	}
+}
+
+.active {
+	opacity: 1;
 }
 </style>
