@@ -13,6 +13,7 @@
 			<i class="fa-brands fa-linkedin"></i>
 			<p>https://www.linkedin.com/in/marcin-cymerman-7703b61b3/</p>
 		</div>
+
 	</section>
 </template>
 <script setup>

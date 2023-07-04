@@ -3,79 +3,43 @@
 		<h2 class="projects__title" id="projects">Projects</h2>
 		<div class="projects__container">
 			<article class="projects__container--box">
-				<h3 class="title">SPR GOKiS Kąty Wrocławskie</h3>
-				<div class="text">
-					<p>SPR GOKiS Kąty Wrocławskie is a website about handball team from my hometown.</p>
-					<p>
-						Stack which was I used during work on this project is: HTML, CSS, SCSS, RWD, JS, Vue(Vue router, Vuex
-						store).
-					</p>
-				</div>
-
-				<div class="buttons-box">
-					<a href="https://cymekk.github.io/spr/" target="_blank"><button class="live">Live link</button></a>
-					<a href="https://github.com/Cymekk/spr" target="_blank"><button class="repo">Repo link</button></a>
-				</div>
-			</article>
-
-			<article class="projects__container--box">
-				<h3 class="title">Wallet - financial manager</h3>
-				<div class="text">
-					<p>
-						Wallet - financial manager is a simple app to manage your finanse. You can provide your incoming and charges
-						and App will automatically calculate your balance:
-					</p>
-					<p>
-						Stack which was I used during work on this project is: HTML, CSS, SCSS, RWD JS, Vue(Vue router, Vuex store),
-						localStorage.
-					</p>
-				</div>
-
-				<div class="buttons-box">
-					<a href="https://cymekk.github.io/wallet/" target="_blank"><button class="live">Live link</button></a>
-					<a href="https://github.com/Cymekk/wallet" target="_blank"><button class="repo">Repo link</button></a>
-				</div>
-			</article>
-
-			<article class="projects__container--box">
-				<h3 class="title">Calories calculator</h3>
-				<div class="text">
-					<p>
-						Calories calculator is a app which will help you stay fit and healthy. At beginning you will need to provide
-						your daily caloric needs(two options to select: automatically calculate or enter calories and makros by
-						yourselfs). Then you will be able to add products which you have eaten.
-					</p>
-					<p>
-						Stack which was I used during work on this project is: HTML, CSS, SCSS, RWD JS, Vue(Vue router, Vuex store),
-						localStorage.
-					</p>
-				</div>
-
-				<div class="buttons-box">
-					<a href="https://cymekk.github.io/kalkulator-kalorii/" target="_blank"
-						><button class="live">Live link</button></a
-					>
-					<a href="https://github.com/Cymekk/kalkulator-kalorii" target="_blank"
-						><button class="repo">Repo link</button></a
-					>
-				</div>
-			</article>
-			<article class="projects__container--box">
 				<h3 class="title">NotesApp</h3>
 				<div class="text">
 					<p>
 						NotesApp is a simple app which allow you to add some notes. Login is neccessary to be able to add some
-						notes, if you don't have already account you can create it by using register form.
+						notes. For testing purposes you can login with below credentials: test@test.com/test123 or you can create
+						you own account register form.
 					</p>
 					<p>
-						Stack which was I used during work on this project is: HTML, CSS, SCSS, RWD, JS, Vue(Vue router), Pinia
-						Store, Firebase
+						Stack which was I used during work on this project is: HTML, CSS, SCSS, RWD, JS, Vue, Pinia Store, Firebase
 					</p>
 				</div>
 
 				<div class="buttons-box">
 					<a href="https://noteapp-d9faf.firebaseapp.com" target="_blank"><button class="live">Live link</button></a>
 					<a href="https://github.com/Cymekk/NoteApp" target="_blank"><button class="repo">Repo link</button></a>
+				</div>
+			</article>
+
+			<article class="projects__container--box">
+				<h3 class="title">Calories Calculator</h3>
+				<div class="text">
+					<p>
+						Calories Calculator is a app which help you stay fit and healthy. For testing purposes you can login with
+						below credentials: test@test.com/test123 or you can create you own account register form.
+					</p>
+					<p>
+						Stack which was I used during work on this project is: HTML, CSS, SCSS, RWD, JS, Vue, Pinia Store, Firebase
+					</p>
+				</div>
+
+				<div class="buttons-box">
+					<a href="https://calories-calculator-7b223.web.app/" target="_blank"
+						><button class="live">Live link</button></a
+					>
+					<a href="https://github.com/Cymekk/Calories-Calculator" target="_blank"
+						><button class="repo">Repo link</button></a
+					>
 				</div>
 			</article>
 		</div>
@@ -88,7 +52,6 @@ onMounted(() => {
 	const handleObserver = () => {
 		const projects = document.querySelector('.projects')
 		const currentSection = window.scrollY
-
 
 		if (projects.offsetTop <= currentSection + window.innerHeight - 200) {
 			projects.classList.add('active')
