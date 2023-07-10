@@ -1,7 +1,7 @@
 <template>
 	<nav class="mobile" :class="{ active: props.modelValue }">
 		<div class="shadow"></div>
-		<div class="mobile__links">
+		<div class="mobile__links" ref="targetRef">
 			<ul>
 				<a href="#projects" @click="handleMobileNav"><li>Projects</li> </a>
 				<a href="#skills" @click="handleMobileNav"><li>Stack</li></a>
@@ -9,6 +9,11 @@
 			</ul>
 		</div>
 	</nav>
+	<button class="burger-btn" @click="handleMobileNav" ref="burgerRef">
+		<div class="bars-box" :class="{ active: props.modelValue }">
+			<div class="bar"></div>
+		</div>
+	</button>
 </template>
 <script setup>
 import { defineProps, defineEmits, ref } from 'vue'
@@ -25,6 +30,19 @@ const emit = defineEmits(['update:modelValue'])
 const handleMobileNav = () => {
 	emit('update:modelValue', !props.modelValue)
 }
+
+const targetRef = ref(null)
+const burgerRef = ref(null)
+
+onClickOutside(
+	targetRef,
+	() => {
+		emit('update:modelValue', !props.modelValue)
+	},
+	{
+		ignore: [burgerRef],
+	}
+)
 </script>
 <style lang="scss">
 .mobile {

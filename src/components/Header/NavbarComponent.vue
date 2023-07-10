@@ -8,14 +8,9 @@
 			</ul>
 		</div>
 	</navbar>
-	<button class="burger-btn" @click="handleMobileNav">
-		<div class="bars-box" :class="{ active: props.modelValue }">
-			<div class="bar"></div>
-		</div>
-	</button>
 </template>
 <script setup>
-import { defineProps, defineEmits } from 'vue'
+import { defineProps } from 'vue'
 
 const props = defineProps({
 	modelValue: {
@@ -23,12 +18,6 @@ const props = defineProps({
 		required: true,
 	},
 })
-
-const emit = defineEmits(['update:modelValue'])
-
-const handleMobileNav = () => {
-	emit('update:modelValue', !props.modelValue)
-}
 </script>
 <style lang="scss">
 .nav {
