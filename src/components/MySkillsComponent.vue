@@ -1,6 +1,6 @@
 <template>
 	<section class="my-skills" id="skills">
-		<h2 class="my-skills__title">Stack</h2>
+		<h2 class="my-skills__title">My Stack</h2>
 
 		<div class="my-skills__container">
 			<div class="box">
@@ -36,7 +36,7 @@
 				<p>SEO</p>
 			</div>
 			<div class="box">
-				<img src="../../assets/firebase.png" alt="firebase icon" />
+				<img src="../assets/firebase.png" alt="firebase icon" />
 				<p>Firebase</p>
 			</div>
 		</div>
@@ -62,21 +62,27 @@ onMounted(() => {
 </script>
 <style lang="scss">
 .my-skills {
-	opacity: 0;
-	transition: opacity 0.5s ease-in;
+	padding: 4rem 2rem;
+	background-color: #454545;
+
 	&__title {
-		margin: 2em 0;
+		opacity: 0;
 		color: #fff;
 		font-size: 2rem;
 		text-align: center;
+		transition: opacity 0.5s ease-in;
 	}
 
 	&__container {
+		opacity: 0;
+		max-width: 1200px;
+		margin: 4rem auto 0 auto;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-evenly;
 		flex-wrap: wrap;
 		gap: 2em;
+		transition: opacity 0.5s ease-in;
 		.box {
 			width: 40%;
 			padding: 2em;
@@ -111,7 +117,10 @@ onMounted(() => {
 }
 
 .active {
-	opacity: 1;
+	.my-skills__title,
+	.my-skills__container {
+		opacity: 1;
+	}
 }
 
 @media (min-width: 576px) {

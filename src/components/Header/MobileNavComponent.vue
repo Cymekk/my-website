@@ -1,36 +1,29 @@
 <template>
-	<nav class="mobile" :class="{ active: isVisible }">
+	<nav class="mobile" :class="{ active: props.modelValue }">
 		<div class="shadow"></div>
 		<div class="mobile__links">
 			<ul>
-				<a href="#projects"><li @click="handleMobileNav">Projects</li> </a>
-				<a href="#skills"><li @click="handleMobileNav">Stack</li></a>
-				<a href="#contact"><li @click="handleMobileNav">Contact</li></a>
+				<a href="#projects" @click="handleMobileNav"><li>Projects</li> </a>
+				<a href="#skills" @click="handleMobileNav"><li>Stack</li></a>
+				<a href="#contact" @click="handleMobileNav"><li>Contact</li></a>
 			</ul>
 		</div>
 	</nav>
 </template>
-<script>
-export default {
-	name: 'MobileNavComponent',
+<script setup>
+import { defineProps, defineEmits, ref } from 'vue'
+import { onClickOutside } from '@vueuse/core'
 
-	props: {
-		isVisible: {
-			type: Boolean,
-			default: false,
-		},
+const props = defineProps({
+	modelValue: {
+		type: Boolean,
+		default: false,
 	},
-	emits: ['show-mobile-nav'],
+})
 
-	setup(props, { emit }) {
-		function handleMobileNav() {
-			emit('show-mobile-nav')
-		}
-
-		return {
-			handleMobileNav,
-		}
-	},
+const emit = defineEmits(['update:modelValue'])
+const handleMobileNav = () => {
+	emit('update:modelValue', !props.modelValue)
 }
 </script>
 <style lang="scss">
@@ -40,7 +33,7 @@ export default {
 	height: 100%;
 	top: 0;
 	transform: translateX(150%);
-	z-index: 1;
+	z-index: 5;
 	display: flex;
 	flex-direction: row;
 	transition: transform 0.5s ease-in-out;
@@ -54,8 +47,8 @@ export default {
 	&__links {
 		width: 60%;
 		height: 100%;
-		background-color: #3f0d12;
-		background-image: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
+		background-color: #000000;
+		background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
 		display: flex;
 		align-items: center;
 

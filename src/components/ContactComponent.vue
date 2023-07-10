@@ -1,7 +1,7 @@
 <template>
 	<section class="contact" id="contact">
 		<h2 class="contact__title">Contact</h2>
-		<div class="box">
+		<div class="box first">
 			<i class="fa-solid fa-phone"></i>
 			<p>518 761 006</p>
 		</div>
@@ -13,7 +13,6 @@
 			<i class="fa-brands fa-linkedin"></i>
 			<p>https://www.linkedin.com/in/marcin-cymerman-7703b61b3/</p>
 		</div>
-
 	</section>
 </template>
 <script setup>
@@ -36,11 +35,11 @@ onMounted(() => {
 </script>
 <style lang="scss">
 .contact {
-	opacity: 0;
+	padding: 4rem 0 4rem 0;
+	background-color: #333;
 	transition: opacity 0.5s ease-in;
 
 	&__title {
-		margin: 2em;
 		color: #fff;
 		font-size: 2rem;
 		text-align: center;
@@ -49,7 +48,10 @@ onMounted(() => {
 	.box {
 		display: flex;
 		align-items: center;
+
+		margin: 0 auto;
 		padding: 1em;
+		max-width: 1200px;
 
 		color: #fff;
 		i {
@@ -60,6 +62,10 @@ onMounted(() => {
 			font-size: 1rem;
 			padding-left: 10px;
 		}
+	}
+
+	.first {
+		margin-top: 2rem;
 	}
 }
 

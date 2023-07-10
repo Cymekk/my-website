@@ -1,6 +1,6 @@
 <template>
 	<main class="projects">
-		<h2 class="projects__title" id="projects">Projects</h2>
+		<h2 class="projects__title" id="projects">My Projects</h2>
 		<div class="projects__container">
 			<article class="projects__container--box">
 				<h3 class="title">NotesApp</h3>
@@ -26,7 +26,7 @@
 				<div class="text">
 					<p>
 						Calories Calculator is a app which help you stay fit and healthy. For testing purposes you can login with
-						below credentials: test@test.com/test123 or you can create you own account register form.
+						below credentials: test@test.com/test123 or you can create you own account by using register form.
 					</p>
 					<p>
 						Stack which was I used during work on this project is: HTML, CSS, SCSS, RWD, JS, Vue, Pinia Store, Firebase
@@ -66,21 +66,26 @@ onMounted(() => {
 <style lang="scss">
 .projects {
 	width: 100%;
-	min-height: 50vh;
+	background-color: #333;
 	color: #fff;
-	opacity: 0;
-	transition: opacity 0.5s ease-in;
+	padding: 4rem 2rem;
 
 	&__title {
+		opacity: 0;
 		text-align: center;
 		font-size: 2rem;
-		margin-bottom: 2em;
+		transition: opacity 0.5s ease-in;
 	}
 
 	&__container {
+		opacity: 0;
+		transition: opacity 0.5s ease-in;
+		max-width: 1200px;
+		margin: 0 auto;
+
 		&--box {
 			width: 90%;
-			margin: 2em auto 0 auto;
+			margin: 4rem auto 0 auto;
 			padding: 2em;
 			display: flex;
 			flex-direction: column;
@@ -147,7 +152,10 @@ onMounted(() => {
 	}
 }
 .active {
-	opacity: 1;
+	.projects__title,
+	.projects__container {
+		opacity: 1;
+	}
 }
 
 @media (min-width: 576px) {
@@ -184,8 +192,9 @@ onMounted(() => {
 			justify-content: center;
 			flex-wrap: wrap;
 			gap: 2em;
+
 			&--box {
-				margin: 0;
+				margin: 4rem 0 0 0;
 				width: 40%;
 			}
 		}

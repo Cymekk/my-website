@@ -39,24 +39,11 @@ window.addEventListener('scroll', () => {
 body {
 	position: relative;
 	width: 100%;
-	min-height: 100svh;
-	background-image: url('./assets/coding-small.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 	font-size: 62.5%;
 	font-family: 'Roboto', sans-serif;
-
-	&::after {
-		content: '';
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		min-height: 100svh;
-		background-color: rgba(0, 0, 0, 0.65);
-		z-index: -1;
-	}
 
 	.scroll-to-top-btn {
 		position: fixed;
@@ -97,12 +84,4 @@ body {
 	}
 }
 
-@media (min-width: 992px) {
-	body {
-		background-image: url('./assets/coding-big.jpg');
-		.scroll-to-top-btn {
-			right: 50px;
-		}
-	}
-}
 </style>

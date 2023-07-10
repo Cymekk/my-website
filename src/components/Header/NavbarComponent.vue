@@ -1,84 +1,88 @@
 <template>
 	<navbar class="nav">
-		<ul>
-			<a href="#projects"><li>Projects</li></a>
-			<a href="#skills"><li>Stack</li></a>
-			<a href="#contact"><li>Contact</li></a>
-		</ul>
+		<div class="nav__links">
+			<ul>
+				<a href="#projects"><li>Projects</li></a>
+				<a href="#skills"><li>Stack</li></a>
+				<a href="#contact"><li>Contact</li></a>
+			</ul>
+		</div>
 	</navbar>
 	<button class="burger-btn" @click="handleMobileNav">
-		<div class="bars-box" :class="{ active: isVisible }">
+		<div class="bars-box" :class="{ active: props.modelValue }">
 			<div class="bar"></div>
 		</div>
 	</button>
 </template>
-<script>
-export default {
-	name: 'NavbarComponent',
-	props: {
-		isVisible: {
-			type: Boolean,
-			default: false,
-		},
-	},
-	emits: ['show-mobile-nav'],
+<script setup>
+import { defineProps, defineEmits } from 'vue'
 
-	setup(props, { emit }) {
-		function handleMobileNav() {
-			emit('show-mobile-nav')
-		}
-
-		return {
-			handleMobileNav,
-		}
+const props = defineProps({
+	modelValue: {
+		type: Boolean,
+		required: true,
 	},
+})
+
+const emit = defineEmits(['update:modelValue'])
+
+const handleMobileNav = () => {
+	emit('update:modelValue', !props.modelValue)
 }
 </script>
 <style lang="scss">
 .nav {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
 	height: 10svh;
 	display: none;
 	flex-direction: row-reverse;
 	align-items: center;
 	color: #fff;
+	z-index: 2;
 
-	ul {
-		list-style: none;
-		display: flex;
+	&__links {
+		margin-right: 2rem;
+		ul {
+			list-style: none;
+			display: flex;
 
-		a {
-			text-decoration: none;
-			color: #fff;
-		}
-
-		li {
-			position: relative;
-			font-size: 1.2rem;
-			margin: 0.5em;
-			padding: 0.5em;
-			border-radius: 5px;
-
-			&::after,
-			&::before {
-				content: '';
-				position: absolute;
-				width: 0;
-				bottom: 0;
-				border-bottom: 2px solid #fff;
-				transition: width 0.3s ease-in;
+			a {
+				text-decoration: none;
+				color: #fff;
 			}
 
-			&::after {
-				left: 50%;
-			}
+			li {
+				position: relative;
+				font-size: 1.2rem;
+				margin: 0.5em;
+				padding: 0.5em;
+				border-radius: 5px;
 
-			&::before {
-				right: 50%;
-			}
+				&::after,
+				&::before {
+					content: '';
+					position: absolute;
+					width: 0;
+					bottom: 0;
+					border-bottom: 2px solid #fff;
+					transition: width 0.3s ease-in;
+				}
 
-			&:hover::after,
-			&:hover::before {
-				width: 50%;
+				&::after {
+					left: 50%;
+				}
+
+				&::before {
+					right: 50%;
+				}
+
+				&:hover::after,
+				&:hover::before {
+					width: 50%;
+				}
 			}
 		}
 	}
@@ -94,7 +98,7 @@ export default {
 	border: none;
 	padding: 5px;
 	outline: none;
-	z-index: 2;
+	z-index: 6;
 
 	.bars-box {
 		position: relative;
