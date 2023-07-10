@@ -37,7 +37,7 @@ const burgerRef = ref(null)
 onClickOutside(
 	targetRef,
 	() => {
-		emit('update:modelValue', !props.modelValue)
+		emit('update:modelValue', false)
 	},
 	{
 		ignore: [burgerRef],
