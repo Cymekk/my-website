@@ -1,0 +1,72 @@
+{
+	"about-me": "About Me",
+	"projects": "My Projects",
+	"stack": "My Stack",
+	"contact": "Contact",
+	"contact-me-btn": "Contact me",
+
+	"settings": {
+		"title": "Select Language",
+		"pl": "Polish",
+		"en": "English",
+		"chooseColor": "Choose color mode"
+	},
+
+	"about-me-first-paragraph": "Hello! I'm Marcin, and professionally, I work in Windows Server system administration. However, frontend development is my true passion. I mainly work with Vue.JS and Firebase, and currently, I am expanding my skills with Nuxt.JS. I also plan to acquire knowledge in TypeScript to further enhance my expertise in this field.",
+	"about-me-second-paragraph": "Outside of work, I immerse myself in the world of sports. I love running, and calisthenics is not just a form of physical activity for me but also a passion. Exploring new possibilities of my body brings me immense joy.",
+	"about-me-third-paragraph": "However, coding and training are not the only things important to me. Fantasy books serve as an escape to fantastical worlds where imagination knows no bounds. In each of these areas, I strive to continually develop, acquire new skills, and share my passion with others.",
+
+	"firstProject": {
+		"projectTitle": "NoteApp",
+		"projectFirstParagraph": "NoteApp is a simple app for taking notes. To add notes, you need to log in, the notes are secured and each user can only see their notes.",
+		"projectSecondParagraph": "For test purposes you can use below credentails",
+		"projectStack": "Stack used for above project: HTML, CSS/SCSS, VueJS, Firebase"
+	},
+
+	"secondProject": {
+		"projectTitle": "Calories Calculator",
+		"projectFirstParagraph": "Calories Calculator is an application that will help you get your dream figure. It is required to create an account, when logging in for the first time you must provide your age, height, weight, choose your gender and choose a goal - whether you want to lose weight, gain weight or just maintain your weight. Based on the above data, the application will calculate your caloric needs.",
+		"projectSecondParagraph": "For test purposes you can use below credentails",
+		"projectStack": "Stack used for above project: HTML, CSS/SCSS, Tailwind,  VueJS, Firebase"
+	},
+
+	"thirdProject": {
+		"projectTitle": "Running diary",
+		"projectFirstParagraph": "Running diary is an application that allows you to record your running training. To add such a note, simply enter the time and distance covered, and the application will calculate your average pace and calories burned. The app provide you statistics like amount of training, number of burned calories, fastest 5km,10km etc.",
+		"projectSecondParagraph": "For test purposes you can use below credentails",
+		"projectStack": "Stack used for above project: HTML, CSS/SCSS, Tailwind,  VueJS, Firebase"
+	},
+
+	"contactForm": {
+		"emailErr": "Invalid email format.",
+		"topicErr": "Subject input is required.",
+		"messageErr": "Message input is required and message min lenght is 30 characters.",
+		"messageSend": "Message has been sent successfully.",
+		"rulesInfo": "By sending the message, you consent to the processing of your personal data provided in the above form."
+	},
+
+	"policy": {
+		"title": "Private Policy",
+		"greetings": "Hello!",
+		"text": "Thank you for visiting our website and for your interest in our services. We believe in the importance of protecting your privacy and would like to inform you about how we collect and use your personal data.",
+
+		"firstPoint": {
+			"title": "Types of collected personal data:",
+			"details": "Your data (such as email address) is collected when using the contact form."
+		},
+		"secondPoint": {
+			"title": "Purpose of collecting personal data:",
+			"details": "Your data collected through the contact form is processed solely for contact purposes. We do not share or sell them to anyone. Using the contact form is voluntary."
+		},
+		"thirdPoint": {
+			"title": "Changes to the Privacy Policy:",
+			"details": "This Privacy Policy may be subject to changes in accordance with current legal regulations and changing business needs. Any changes will be published on our website along with the date of their implementation."
+		},
+		"fourthPoint": {
+			"title": "Additional information:",
+			"details": "If you have any questions, please contact us at: "
+		}
+	},
+	
+	"cookiesText": "By using my website, you consent to the use of cookies in accordance with"
+}

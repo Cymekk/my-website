@@ -1,0 +1,72 @@
+{
+	"about-me": "O Mnie",
+	"projects": "Moje Projekty",
+	"stack": "Mój Stack",
+	"contact": "Kontakt",
+	"contact-me-btn": "Napisz do mnie",
+
+	"settings": {
+		"title": "Wybierz język",
+		"pl": "Polski",
+		"en": "Angielski",
+		"chooseColor": "Wybierz tryb kolorów"
+	},
+
+	"about-me-first-paragraph": "Cześć! Jestem Marcin, a zawodowo zajmuję się administracją systemów Windows Server. Jednak to frontend development jest moją prawdziwą pasją. Pracuję głównie z Vue.JS i Firebase, a obecnie poszerzam swoje umiejętności o Nuxt.JS. Planuję również zdobycie wiedzy z TypeScript, aby jeszcze bardziej rozwijać się w tej dziedzinie.",
+	"about-me-second-paragraph": "Po godzinach, pochłania mnie świat sportu. Uwielbiam biegać, a kalistenika to dla mnie nie tylko forma aktywności fizycznej, ale także pasja. Odkrywanie nowych możliwości swojego ciała sprawia mi ogromną radość.",
+	"about-me-third-paragraph": "Jednak nie tylko kodowanie i trening są dla mnie ważne. Książki fantasy stanowią dla mnie ucieczkę do fantastycznych światów, gdzie wyobraźnia nie zna granic. W każdej z tych dziedzin staram się nieustannie rozwijać, zdobywać nowe umiejętności i dzielić się pasją z innymi.",
+
+	"firstProject": {
+		"projectTitle": "NoteApp",
+		"projectFirstParagraph": "NoteApp to prosta aplikacja do zapisywanie swoich notatek. Aby dodawać notatki musisz się zalogować, notatki są zabezpieczone i każdy użytkownik widzi tylko swoje notatki.",
+		"projectSecondParagraph": "Do celów testowych możesz użyć poniższych danych: ",
+		"projectStack": "Technologie użyte do tworzenia tego projektu: HTML, CSS/SCSS, VueJS, Firebase"
+	},
+
+	"secondProject": {
+		"projectTitle": "Kalkulator Kalorii",
+		"projectFirstParagraph": "Kalkulator Kalorii to aplikacja która pomoże ci uzyskać twoją wymarzoną sylwetkę. Założenie konta jest wymagane, przy pierwszym logowaniu trzeba podać swój wiek, wzrost, wagę, wybrać płeć oraz wybrać cel, czy chcemy schudnąć, nabrać masy czy po prostu utrzymać swoją wagę. Aplikacja na podstawie powyższych danych obliczy nasze zapotrzebowanie kaloryczne.",
+		"projectSecondParagraph": "Aby zalogować się na konto testowe prosze użyć poniższych danych: ",
+		"projectStack": "Technologie użyte do tworzenia tego projektu: HTML, CSS/SCSS, Tailwind, VueJS, Firebase"
+	},
+
+	"thirdProject": {
+		"projectTitle": "Dziennik biegowy",
+		"projectFirstParagraph": "Dziennik biegowy to aplikacja umożliwiająca zapisywanie swoich treningów biegowych, aby dodać taka notatkę trzeba podaj jedynie czas i dystans jaki się przebiegło, a aplikacja obliczy nam srednie tempo oraz spalone kalorie. W aplikacji znajdziesz statystyki takie jak liczba treningów, suma spalonych kalorii, najszybsze 5km, 10km itd.",
+		"projectSecondParagraph": "Aby zalogować się na konto testowe prosze użyć poniższych danych: ",
+		"projectStack": "Technologie użyte do tworzenia tego projektu: HTML, CSS/SCSS, Tailwind, VueJS, Firebase"
+	},
+
+	"contactForm": {
+		"emailErr": "Niepoprawny adres email.",
+		"topicErr": "Pole temat nie może być puste.",
+		"messageErr": "Wiadomość nie może być pusta, minimalna długość wiadomości wynosi 30 znaków.",
+		"messageSend": "Wiadomość została wysłana pomyślnie",
+		"rulesInfo": "Wysyłając wiadomość wyrażasz zgodę na przetwarzanie swoich danych osobowych podanych w powyższym formularzu"
+	},
+
+	"policy": {
+		"title": "Polityka Prywatności",
+		"greetings": "Cześć!",
+		"text": "Dziękujemy za odwiedzenie naszej strony internetowej oraz za zainteresowanie naszymi usługami. Wierzymy w znaczenie ochrony Twojej prywatności i chcielibyśmy Cię poinformować, w jaki sposób gromadzimy, używamy Twoich danych osobowych.",
+
+		"firstPoint": {
+			"title": "Rodzaje zbieranych danych osobowych:",
+			"details": "Twoje dane (takie jak adres e-mail) zbierane są podczas korzystania z formularza kontaktowego."
+		},
+		"secondPoint": {
+			"title": "Cel zbierania danych osobowych:",
+			"details": "Twoje dane zebrane przez formularz kontaktowy przetwarzane są jedynie w celach kontaktowych. Nie udostępniamy ich nikomu, nie sprzedajemy ich. Korzystanie z formularza kontaktowego jest dobrowolne.."
+		},
+		"thirdPoint": {
+			"title": "Zmiany w Polityce prywatności:",
+			"details": "Niniejsza Polityka prywatności może ulegać zmianom zgodnie z aktualnymi przepisami prawnymi oraz zmieniającymi się potrzebami biznesowymi. Wszelkie zmiany zostaną opublikowane na naszej stronie internetowej wraz z datą ich wprowadzenia."
+		},
+		"fourthPoint": {
+			"title": "Pozostałe informacje:",
+			"details": "W razie jakichkolwiek pytań prosimy o kontakt na:"
+		}
+	},
+
+	"cookiesText": "Korzystając z mojej strony, wyrażasz zgodę na stosowanie plików cookie zgodnie z"
+}
